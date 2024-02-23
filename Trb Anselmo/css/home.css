@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Sora:wght@300;400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'popins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow: scroll;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    border-right: 1px solid #2f3336;
+    transition: all 0.35s;
+}
+
+.sidebar-header{
+    width: 35px;
+    margin-bottom: 16px;
+}
+
+.usuario-img{
+    width: 38px;
+    min-height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    margin-left: 10px;
+}
+
+.usuario-img:hover{
+    transform: scale(1.2);
+    
+}
+
+.sidebar button{
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.sidebar button > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0;
+    border-radius: 24px;
+    line-height: 1;
+    transition: all 0.2s;
+}
+
+.sidebar button:hover > span {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar button i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button span {
+    font-size: 16px;
+}
+
+.sidebar > nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main{
+    margin-left: 250px;
+    margin-right: 6px;
+    overflow: hidden;
+    
+}
+
+/* Ajustando a sidebar com apenas os icones */
+
+@media (width < 920px){
+    .sidebar{
+        width: 72px;
+    }
+    .sidebar button > span {
+        width: 50px;
+    }
+
+    .sidebar button > span > span {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .main{
+        transition: margin 0.4s;
+        margin-left: 78px;
+    }
+    
+}
+
+.button-mobile{
+    display: none;
+    align-self: flex-start;
+    align-items: center;
+    margin: 16px;
+    background: transparent;
+    color: #fff;
+    border: 0;
+}
+
+.button-close span i{
+    font-size: 42px;
+}
+
+.button-mobile span{
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.menu-mobile-active{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.menu-mobile-active button{
+    background: transparent;
+    border: 0;
+    color: inherit;
+    margin-bottom: 16px;
+}
+
+.menu-mobile-active button > span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.mobile-text{
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+@media (max-width: 480px){
+    .sidebar{
+        display: none;
+    }
+    
+    .button-mobile{
+        display: flex;
+    }
+
+    .main{
+        margin-left: 6px;
+    }
+}
+
+/* Criação dos storys da rede social */
+
+:root{
+    --cor0: #4c3f91;
+    --cor1: #9145b6;
+    --cor2: #b958a5;
+    --cor4: #ff5677;
+    --cor5: #ffffff;
+    --cor6: 0c0ce94d;
+    --cor7: #ccc;
+    --cor8: #f1f1f1;
+    --black: #130f0d;
+    --primary: hsl(32, 98%, 56%);
+    --white: #f0f0f9;
+}
+
+img{
+    width: 50px;
+}
+
+.container{
+    width: 90px;
+    height: 600px;
+    overflow-y: auto;
+    margin-left: 90%;
+    margin-top: 50px;
+
+}
+
+ul{
+    margin: auto;
+    list-style: none;
+    gap: 10px;
+    padding: 3px;
+    
+}
+
+li{
+    padding: 5px;
+}
+
+
+
+.storys-area{
+    width: 60px;
+    height: 60px;
+    padding: 4px;
+    background-image: linear-gradient(45deg, var(--cor4),var(--cor0));
+    border-radius: 50%;
+}
+
+.storys-area:hover .photo img{
+    transform: scale(1.1);
+}
+
+.photo{
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    background-color: var(--cor5);
+    border-radius: 50%;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+
